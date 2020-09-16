@@ -17,6 +17,4 @@ const elements = ingredients.map(ingredient => {
   return liElement;
 });
 
-console.log(elements);
-
 navElIngredients.append(...elements);
