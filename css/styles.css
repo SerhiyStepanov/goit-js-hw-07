@@ -1,0 +1,27 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#gallery {
+  display: flex;
+  align-items: center;
+}
+
+#gallery > li {
+  list-style: none;
+  margin-left: 0;
+  margin-right: 20px;
+  width: calc((100% - 20px) / 3);
+}
