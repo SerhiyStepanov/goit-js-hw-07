@@ -27,7 +27,7 @@ const addItemGallery = images.map(image => {
   imageEl.src = `${image.url}`;
   imageEl.alt = `${image.alt}`;
 
-  liItemEl.appendChild(imageEl);
+  liItemEl.insertAdjacentElement('afterbegin', imageEl);
   return liItemEl;
 });
 
