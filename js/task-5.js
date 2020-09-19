@@ -4,14 +4,14 @@ const refs = {
 };
 
 const inputEl = document.querySelector('#name-input');
-console.log(inputEl);
+console.dir(refs.inputEl);
 const outputEl = document.querySelector('#name-output');
-console.log(outputEl);
+console.dir(refs.outputEl);
 
 refs.inputEl.addEventListener('input', oninputChange);
 
 function oninputChange(event) {
-  console.dir(event.currentTarget.value);
+  // console.log(event.currentTarget.value);
 
-  outputEl.textContent = event.currentTarget.value;
+  refs.outputEl.textContent = event.currentTarget.value;
 }
