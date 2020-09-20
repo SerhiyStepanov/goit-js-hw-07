@@ -1,12 +1,10 @@
-const refs = {
-  input: document.querySelector('#font-size-control'),
-  span: document.querySelector('#text'),
-};
+const inputEl = document.querySelector('#font-size-control');
+console.log(inputEl);
+const spanEl = document.querySelector('#text');
+console.log(spanEl);
 
-refs.input.addEventListener('input', onRange);
-// refs.span.style.onRange = currentTarget;
+inputEl.addEventListener('input', onRange);
 
 function onRange(event) {
-  //   console.log(event.currentTarget);
-  refs.span.style.sizeControl = event.currentTarget;
+  // console.log(event.currentTarget.value);
 }
