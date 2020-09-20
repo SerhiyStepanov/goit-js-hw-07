@@ -1,5 +1,5 @@
-const galleryImages = document.querySelector('#gallery');
-console.log(galleryImages);
+const navGallery = document.querySelector('#gallery');
+console.log(navGallery);
 
 const images = [
   {
@@ -19,18 +19,15 @@ const images = [
   },
 ];
 
-const addItemGallery = images.map(image => {
-  //   console.log(image);
-  const liItemEl = document.createElement('li');
+const navGalleryEl = images.map(img => {
+  const liEl = document.createElement('li');
 
-  const imageEl = document.createElement('img');
-  imageEl.src = `${image.url}`;
-  imageEl.alt = `${image.alt}`;
+  const imgEl = document.createElement('img');
+  imgEl.src = `${img.url}`;
+  imgEl.alt = `${img.alt}`;
 
-  liItemEl.insertAdjacentElement('afterbegin', imageEl);
-  return liItemEl;
+  liEl.appendChild(imgEl);
+  return liEl;
 });
 
-// console.log(addItemGallery);
-
-galleryImages.append(...addItemGallery);
+navGallery.append(...navGalleryEl);
