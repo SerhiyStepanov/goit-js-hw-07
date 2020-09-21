@@ -1,16 +1,16 @@
 const inputEl = document.querySelector('#font-size-control');
 console.log(inputEl);
-const spanEl = document.querySelector('#text');
-console.log(spanEl);
+const span = document.querySelector('#text');
+console.log(span);
 
 const refs = {
   inputEl: document.querySelector('#font-size-control'),
-  spanEl: document.querySelector('#text'),
+  span: document.querySelector('#text'),
 };
 
 refs.inputEl.addEventListener('input', onInputRange);
 
 function onInputRange(event) {
-  console.log(event.currentTarget.value);
-  refs.spanEl.style.fontSize = event.currentTarget.value;
+  console.log(Number(event.currentTarget.value));
+  refs.span.style.fontSize = Number.parseInt('event.currentTarget.valuepx');
 }
