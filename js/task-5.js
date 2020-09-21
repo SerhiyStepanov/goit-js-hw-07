@@ -12,10 +12,10 @@ refs.inputEl.addEventListener('input', onInputChange);
 
 function onInputChange(event) {
   // console.log(event.currentTarget.value);
-  if (event.currentTarge !== '') {
+  if (event.currentTarget.value !== '') {
     refs.outputEl.textContent = event.currentTarget.value;
   } else {
-    refs.spanEl.textContent = `${refs.outputEl.textContent}`;
+    refs.outputEl.textContent = 'незнакомец';
   }
   return;
 }
