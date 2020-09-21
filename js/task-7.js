@@ -11,5 +11,6 @@ const refs = {
 refs.inputEl.addEventListener('input', onInputRange);
 
 function onInputRange(event) {
-  // console.log(event.currentTarget.value);
+  console.log(event.currentTarget.value);
+  refs.spanEl.style.fontSize = event.currentTarget.value;
 }

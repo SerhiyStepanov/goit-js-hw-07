@@ -14,5 +14,8 @@ function onInputChange(event) {
   // console.log(event.currentTarget.value);
   if (event.currentTarge !== '') {
     refs.outputEl.textContent = event.currentTarget.value;
+  } else {
+    refs.spanEl.textContent = `${refs.outputEl.textContent}`;
   }
+  return;
 }
