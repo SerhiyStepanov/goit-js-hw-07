@@ -11,10 +11,10 @@ const navElIngredients = document.querySelector('#ingredients');
 console.log(navElIngredients);
 
 const elements = ingredients.map(ingredient => {
-  const liElement = document.createElement('li');
-  liElement.textContent = ingredient;
+  const liEl = document.createElement('li');
+  liEl.textContent = ingredient;
   //   console.log(ingredient);
-  return liElement;
+  return liEl;
 });
 
 navElIngredients.append(...elements);

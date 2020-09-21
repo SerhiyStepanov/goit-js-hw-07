@@ -1,30 +1,30 @@
-const counterNav = document.querySelector('#counter');
-console.log(counterNav);
+const navCounter = document.querySelector('#counter');
+console.log(navCounter);
+
+const btnDecrement = document.querySelector('button[data-action="decrement"]');
+console.log(btnDecrement);
+const btnIncrement = document.querySelector('button[data-action="increment"]');
+console.log(btnIncrement);
+
+const valueEl = document.querySelector('#value');
+console.log(valueEl);
 
 const counter = {
   value: 0,
-  increment() {
-    this.value += 1;
-  },
   decrement() {
-    this.value -= 1;
+    counter.value -= 1;
+  },
+  increment() {
+    counter.value += 1;
   },
 };
 
-const incrementBtn = document.querySelector('button[data-action="increment"]');
-const decrementBtn = document.querySelector('button[data-action="decrement"]');
-const counterValue = document.querySelector('#value');
-
-// console.log(incrementBtn);
-// console.log(decrementBtn);
-// console.log(counterValue);
-
-incrementBtn.addEventListener('click', function () {
-  counter.increment();
-  counterValue.textContent = counter.value;
+btnDecrement.addEventListener('click', () => {
+  counter.decrement();
+  valueEl.textContent = counter.value;
 });
 
-decrementBtn.addEventListener('click', function () {
-  counter.decrement();
-  counterValue.textContent = counter.value;
+btnIncrement.addEventListener('click', () => {
+  counter.increment();
+  valueEl.textContent = counter.value;
 });
