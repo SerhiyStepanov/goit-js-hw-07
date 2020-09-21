@@ -12,5 +12,5 @@ refs.inputEl.addEventListener('input', onInputRange);
 
 function onInputRange(event) {
   console.log(Number(event.currentTarget.value));
-  refs.span.style.fontSize = Number.parseInt('event.currentTarget.valuepx');
+  refs.span.style.fontSize = Number.parseInt(`${event.currentTarget.valuepx}`);
 }
