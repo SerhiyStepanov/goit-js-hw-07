@@ -4,7 +4,7 @@ console.log(validationInput);
 const refs = {
   type: 'text',
   id: 'validation-input',
-  datalength: 6,
+  datalength: '6',
   placeholder: 'Введи 6 символов',
 };
 
@@ -17,12 +17,12 @@ function onValidInput(event) {
 
 function onBlurInput(event) {
   if (
-    event.currentTarget.value.length < refs.datalength ||
-    event.currentTarget.value.length > refs.datalength
+    event.currentTarget.value.length < Number(refs.datalength) ||
+    event.currentTarget.value.length > Number(refs.datalength)
   ) {
     validationInput.classList.add('invalid');
   }
-  if (event.currentTarget.value.length === refs.datalength) {
+  if (event.currentTarget.value.length === Number(refs.datalength)) {
     validationInput.classList.replace('invalid', 'valid');
   }
   return validationInput;

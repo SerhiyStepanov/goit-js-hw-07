@@ -3,8 +3,13 @@ console.log(inputEl);
 const spanEl = document.querySelector('#text');
 console.log(spanEl);
 
-inputEl.addEventListener('input', onRange);
+const refs = {
+  inputEl: document.querySelector('#font-size-control'),
+  spanEl: document.querySelector('#text'),
+};
 
-function onRange(event) {
+refs.inputEl.addEventListener('input', onInputRange);
+
+function onInputRange(event) {
   // console.log(event.currentTarget.value);
 }
