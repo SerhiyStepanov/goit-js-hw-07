@@ -16,7 +16,9 @@ function onValidInput(event) {
 }
 
 function onBlurInput(event) {
-  if (event.currentTarget.value.length !== Number(refs.datalength)) {
+  if (
+    event.currentTarget.value.length !== Number(validationInput.dataset.length)
+  ) {
     validationInput.classList.add('invalid');
   } else {
     validationInput.classList.remove('invalid');
