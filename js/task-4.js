@@ -12,10 +12,10 @@ console.log(valueEl);
 const counter = {
   value: 0,
   decrement() {
-    counter.value -= 1;
+    this.value -= 1;
   },
   increment() {
-    counter.value += 1;
+    this.value += 1;
   },
 };
 

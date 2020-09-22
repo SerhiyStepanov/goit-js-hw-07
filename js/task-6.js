@@ -16,14 +16,17 @@ function onValidInput(event) {
 }
 
 function onBlurInput(event) {
-  if (
-    event.currentTarget.value.length < Number(refs.datalength) ||
-    event.currentTarget.value.length > Number(refs.datalength)
-  ) {
+  // if (
+  //   event.currentTarget.value.length < Number(refs.datalength) ||
+  //   event.currentTarget.value.length > Number(refs.datalength)
+  // ) {
+  //   validationInput.classList.add('invalid');
+  // }
+  if (event.currentTarget.value.length !== Number(refs.datalength)) {
     validationInput.classList.add('invalid');
-  }
-  if (event.currentTarget.value.length === Number(refs.datalength)) {
-    validationInput.classList.replace('invalid', 'valid');
+  } else {
+    validationInput.classList.toggle('invalid');
+    validationInput.classList.add('valid');
   }
   return validationInput;
 }
