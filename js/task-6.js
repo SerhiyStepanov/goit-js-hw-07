@@ -20,6 +20,7 @@ function onBlurInput(event) {
     event.currentTarget.value.length !== Number(validationInput.dataset.length)
   ) {
     validationInput.classList.add('invalid');
+    validationInput.classList.remove('valid');
   } else {
     validationInput.classList.remove('invalid');
     validationInput.classList.add('valid');
